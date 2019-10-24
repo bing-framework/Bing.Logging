@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Bing.Logging.Console;
+﻿using Bing.Logging.Console;
 using Xunit;
 using Xunit.Abstractions;
 

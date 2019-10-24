@@ -1,5 +1,3 @@
-using System;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Bing.Logging.Tests
@@ -18,9 +16,6 @@ namespace Bing.Logging.Tests
         /// 初始化一个<see cref="TestBase"/>类型的实例
         /// </summary>
         /// <param name="output">输出</param>
-        public TestBase(ITestOutputHelper output)
-        {
-            Output = output;
-        }
+        public TestBase(ITestOutputHelper output) => Output = output;
     }
 }
