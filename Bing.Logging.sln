@@ -13,15 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-tests", "02-tests", "{E4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-sample", "03-sample", "{7DD68D6E-51C0-4277-B4DC-70F29D3BE8C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing.Logging.Tests", "tests\Bing.Logging.Tests\Bing.Logging.Tests.csproj", "{063F643D-DBDE-4699-8FF7-C97895E3440B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bing.Logging.Tests", "tests\Bing.Logging.Tests\Bing.Logging.Tests.csproj", "{063F643D-DBDE-4699-8FF7-C97895E3440B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing.Logging.Samples.Console", "samples\Bing.Logging.Samples.Console\Bing.Logging.Samples.Console.csproj", "{E9DAC48E-A86B-417C-96F8-BA1E96828A95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bing.Logging.Samples.Console", "samples\Bing.Logging.Samples.Console\Bing.Logging.Samples.Console.csproj", "{E9DAC48E-A86B-417C-96F8-BA1E96828A95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing.Logging.Log4Net", "src\Bing.Logging.Log4Net\Bing.Logging.Log4Net.csproj", "{FC867C55-B247-4E95-9679-F5F23914C1AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bing.Logging.Log4Net", "src\Bing.Logging.Log4Net\Bing.Logging.Log4Net.csproj", "{FC867C55-B247-4E95-9679-F5F23914C1AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing.Logging.NLog", "src\Bing.Logging.NLog\Bing.Logging.NLog.csproj", "{0C639613-A3D9-4A3B-AAF8-42B0B3C8003F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bing.Logging.NLog", "src\Bing.Logging.NLog\Bing.Logging.NLog.csproj", "{0C639613-A3D9-4A3B-AAF8-42B0B3C8003F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing.Logging.Exceptionless", "src\Bing.Logging.Exceptionless\Bing.Logging.Exceptionless.csproj", "{1AC958D5-0AD5-416A-8D67-32AD23D24C07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bing.Logging.Exceptionless", "src\Bing.Logging.Exceptionless\Bing.Logging.Exceptionless.csproj", "{1AC958D5-0AD5-416A-8D67-32AD23D24C07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bing.Logging.Samples.WebApi", "samples\Bing.Logging.Samples.WebApi\Bing.Logging.Samples.WebApi.csproj", "{B262B7F7-10AE-461F-ACDD-439D4B8E0DF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{1AC958D5-0AD5-416A-8D67-32AD23D24C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AC958D5-0AD5-416A-8D67-32AD23D24C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AC958D5-0AD5-416A-8D67-32AD23D24C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B262B7F7-10AE-461F-ACDD-439D4B8E0DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B262B7F7-10AE-461F-ACDD-439D4B8E0DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B262B7F7-10AE-461F-ACDD-439D4B8E0DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B262B7F7-10AE-461F-ACDD-439D4B8E0DF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{FC867C55-B247-4E95-9679-F5F23914C1AA} = {F285C239-2F9A-442C-BA60-955FA52EA087}
 		{0C639613-A3D9-4A3B-AAF8-42B0B3C8003F} = {F285C239-2F9A-442C-BA60-955FA52EA087}
 		{1AC958D5-0AD5-416A-8D67-32AD23D24C07} = {F285C239-2F9A-442C-BA60-955FA52EA087}
+		{B262B7F7-10AE-461F-ACDD-439D4B8E0DF7} = {7DD68D6E-51C0-4277-B4DC-70F29D3BE8C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {296FFBF8-C539-4429-8530-745F76951110}
