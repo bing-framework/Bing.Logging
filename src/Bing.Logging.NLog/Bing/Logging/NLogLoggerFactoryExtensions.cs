@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 using Bing.Logging.NLog;
+using Bing.Logging.NLog.Internal;
 using NLog;
 using NLog.Config;
 
@@ -16,7 +17,7 @@ namespace Bing.Logging
         /// </summary>
         /// <param name="factory">日志工厂</param>
         /// <param name="fileName">配置文件名称</param>
-        public static ILoggerFactory AddNLog(this ILoggerFactory factory, string fileName = "")
+        public static ILoggerFactory AddNLog(this ILoggerFactory factory, string fileName = InternalConst.DefaultConfigFile)
         {
             if (!string.IsNullOrEmpty(fileName) && File.Exists(fileName))
                 LogManager.Configuration = new XmlLoggingConfiguration(fileName, true);
