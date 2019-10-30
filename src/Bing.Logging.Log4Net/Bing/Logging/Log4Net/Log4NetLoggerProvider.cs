@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Bing.Logging.Log4Net.Internal;
+﻿using Bing.Logging.Log4Net.Internal;
 
 namespace Bing.Logging.Log4Net
 {
@@ -19,6 +16,6 @@ namespace Bing.Logging.Log4Net
         /// 创建一个新的<see cref="ILogger"/>实例
         /// </summary>
         /// <param name="name">日志名称</param>
-        public ILogger CreateLogger(string name) => new Log4NetLogger(log4net.LogManager.GetLogger("Default", name));
+        public ILogger CreateLogger(string name) => new Log4NetLogger(log4net.LogManager.GetLogger(Log4NetLogger.RepositoryName, name));
     }
 }

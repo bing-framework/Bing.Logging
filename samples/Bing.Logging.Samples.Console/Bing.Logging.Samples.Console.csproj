@@ -7,6 +7,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Bing.Logging.Console\Bing.Logging.Console.csproj" />
+    <ProjectReference Include="..\..\src\Bing.Logging.Exceptionless\Bing.Logging.Exceptionless.csproj" />
+    <ProjectReference Include="..\..\src\Bing.Logging.Log4Net\Bing.Logging.Log4Net.csproj" />
+    <ProjectReference Include="..\..\src\Bing.Logging.NLog\Bing.Logging.NLog.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

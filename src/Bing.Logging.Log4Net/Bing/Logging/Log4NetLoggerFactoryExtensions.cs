@@ -1,4 +1,5 @@
 ﻿using Bing.Logging.Log4Net;
+using Bing.Logging.Log4Net.Internal;
 
 namespace Bing.Logging
 {
@@ -11,9 +12,26 @@ namespace Bing.Logging
         /// 添加Log4Net日志记录器
         /// </summary>
         /// <param name="factory">日志工厂</param>
-        public static ILoggerFactory AddLog4Net(this ILoggerFactory factory)
+        public static ILoggerFactory AddLog4Net(this ILoggerFactory factory) => AddLog4Net(factory, InternalConst.DefaultLogName, InternalConst.DefaultConfigFile);
+
+        /// <summary>
+        /// 添加Log4Net日志记录器
+        /// </summary>
+        /// <param name="factory">日志工厂</param>
+        /// <param name="configFile">配置文件</param>
+        /// <returns></returns>
+        public static ILoggerFactory AddLog4Net(this ILoggerFactory factory, string configFile) => AddLog4Net(factory, InternalConst.DefaultLogName, configFile);
+
+        /// <summary>
+        /// 添加Log4Net日志记录器
+        /// </summary>
+        /// <param name="factory">日志工厂</param>
+        /// <param name="repositoryName">仓储名称</param>
+        /// <param name="configFile">配置文件</param>
+        public static ILoggerFactory AddLog4Net(this ILoggerFactory factory, string repositoryName, string configFile)
         {
             factory.AddProvider(new Log4NetLoggerProvider());
+            Log4NetLogger.InitRepository(repositoryName, configFile);
             return factory;
         }
     }

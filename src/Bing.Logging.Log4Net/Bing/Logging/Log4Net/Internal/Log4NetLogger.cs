@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Bing.Logging.Log4Net.Internal
 {
@@ -22,6 +23,29 @@ namespace Bing.Logging.Log4Net.Internal
         /// </summary>
         /// <param name="log">Log4Net 日志操作</param>
         public Log4NetLogger(log4net.ILog log) => _log = log;
+
+        /// <summary>
+        /// Log4Net 日志仓储
+        /// </summary>
+        internal static log4net.Repository.ILoggerRepository Repository { get; set; }
+
+        /// <summary>
+        /// 仓储名称
+        /// </summary>
+        internal static string RepositoryName { get; set; }
+
+        /// <summary>
+        /// 初始化日志仓储
+        /// </summary>
+        /// <param name="repositoryName">仓储名称</param>
+        /// <param name="configFile">配置文件</param>
+        internal static void InitRepository(string repositoryName, string configFile)
+        {
+            RepositoryName = repositoryName;
+            if (Repository == null)
+                Repository = log4net.LogManager.CreateRepository(repositoryName);
+            log4net.Config.XmlConfigurator.Configure(Repository, new FileInfo(configFile));
+        }
 
         /// <summary>
         /// 检查给定日志级别是否启用

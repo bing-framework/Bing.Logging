@@ -23,6 +23,9 @@ namespace Bing.Logging.Samples.Console.Demos
             _loggerFactory.AddConsole(LogLevel.Trace, true);
         }
 
+        /// <summary>
+        /// 写日志
+        /// </summary>
         [Demo]
         public void WriteLog()
         {
@@ -42,6 +45,9 @@ namespace Bing.Logging.Samples.Console.Demos
             Thread.Sleep(2000);
         }
 
+        /// <summary>
+        /// 写日志
+        /// </summary>
         [Demo]
         public void WriteLog2()
         {
